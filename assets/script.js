@@ -12,15 +12,31 @@ articles.forEach((art) => {
   }
 });
 
+
 const featureArt = (i) => {
   articles.forEach((art) => {
     if (art.dataset.artid == i) {
       art.classList.remove("outOfFocusArt");
-      art.classList.add("inFocusArt")
+      art.classList.add("inFocusArt");
     } else {
       art.classList.add("outOfFocusArt");
-      art.classList.remove("inFocusArt")
+      art.classList.remove("inFocusArt");
     }
+  });
+
+  // Move the selected article to the center
+  const carousel = document.getElementById("carouselMain");
+  const selectedIndex = articles.findIndex(
+    (art) => art.dataset.artid == i
+  );
+
+  const leftArticle = articles[(selectedIndex + 2) % 3];
+  const centerArticle = articles[selectedIndex];
+  const rightArticle = articles[(selectedIndex + 1) % 3];
+
+  carousel.append(leftArticle, centerArticle, rightArticle);
+};
+
   });
 };
 
