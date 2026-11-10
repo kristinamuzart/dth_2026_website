@@ -389,3 +389,83 @@ article a:hover {
     height: auto;
     border-radius: 10px;
 }
+
+/* LOFI CAROUSEL - SHOW FULL DESCRIPTIONS */
+
+#carouselMain {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 500px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.carouselArt {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 450px;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.carouselArt p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.6;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+/* LOFI CAROUSEL BUTTONS */
+
+#carouselBtnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.carouselBtn {
+    background-color: #283A74;
+    color: #F29AB2;
+    border: 1px solid #7462B5;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carouselBtn:hover {
+    background-color: #7462B5;
+    color: #F6EFF8;
+    transform: scale(1.08);
+}
+
+/* Cozy lofi carousel arrows */
+
+#carouselBtnContainer .carouselBtn {
+    background-color: #252047;
+    color: #F29AB2;
+    border: 1px solid #7462B5;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+#carouselBtnContainer .carouselBtn:hover {
+    background-color: #49396F;
+    color: #FFFFFF;
+    transform: scale(1.06);
+}
