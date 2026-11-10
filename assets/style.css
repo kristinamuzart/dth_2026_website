@@ -1,7 +1,7 @@
 /* root setup */
 
 /* here we import the Lexend font from Google fonts. You can browse other fonts at https://fonts.google.com/*/
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
 
 /* here we set up project specific variables - this way we can keep the style consistent across all pages and elements. You can also create variable names for specific fonts and other elements */
 :root {
@@ -15,7 +15,7 @@
     --red: #F27E98;
     --yellow: #F5BC80;
 
-  --projectFont: Lexend, Arial, sans-serif;
+  --projectFont: 'DM Sans', Arial, sans-serif;
 }
 
 /* individual element styles */
@@ -468,4 +468,38 @@ article a:hover {
     background-color: #49396F;
     color: #FFFFFF;
     transform: scale(1.06);
+}
+
+/* LOFI WEBSITE FONTS */
+
+/* Main text */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Article paragraphs and lists */
+main p,
+main li,
+article p,
+article li {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+/* Banner title */
+#bannerShadow h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
+
+/* Navigation */
+#navBar,
+#navBar a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
 }
