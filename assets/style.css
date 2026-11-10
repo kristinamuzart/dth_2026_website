@@ -239,3 +239,33 @@ main img {
     font-size: clamp(1.8rem, 4vw, 3rem);
     padding: 0 20px;
 }
+/* Consistent headings across all three pages */
+
+/* Main page titles over the banner */
+#bannerShadow h1 {
+    color: #F6EFF8;
+}
+
+/* Article headings */
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+main h1,
+main h2,
+main h3,
+main h4 {
+    color: #283A74;
+}
+
+/* Links inside articles */
+#content a,
+main a {
+    color: #AE5DAA;
+}
+
+/* Hover color */
+#content a:hover,
+main a:hover {
+    color: #F27E98;
+}
