@@ -609,3 +609,58 @@ article a:hover {
         0 0 18px rgba(174, 93, 170, 0.3),
         0 10px 30px rgba(0, 0, 0, 0.25);
 }
+
+/* DREAMY LOFI STAR BACKGROUND */
+
+#star-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#star-background .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #FFE7FB;
+    box-shadow: 0 0 8px 2px rgba(217, 159, 244, 0.7);
+    opacity: 0;
+    animation: starDrift 9s linear infinite;
+}
+
+/* Keep website content above the stars */
+
+#navBar, #pageHero, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Stars slowly twinkle and drift downward */
+
+@keyframes starDrift {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.6);
+    }
+    35% {
+        opacity: 0.75;
+    }
+    65% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(35px) scale(1);
+    }
+}
+
+/* Respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+    #star-background .star {
+        animation: none;
+    }
+}

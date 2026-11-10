@@ -9,7 +9,7 @@
     <script src="./assets/content_load.js" defer></script>
     <script src="./assets/script.js" defer></script>
   </head>
-  <body>
+  <body><div id="star-background" aria-hidden="true"></div>
     <header>
       <div id="navBar" class="flex defaultPageMargin">
         
@@ -88,5 +88,25 @@
         <p class="blueText">Digital Technologies in the Humanities, fall 2026</p>
       </div>
     </footer>
-  </body>
+  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sky = document.getElementById("star-background");
+
+    if (!sky) return;
+
+    for (let i = 0; i < 45; i++) {
+        const star = document.createElement("span");
+        star.className = "star";
+
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+        star.style.animationDelay = -Math.random() * 9 + "s";
+        star.style.animationDuration = (7 + Math.random() * 6) + "s";
+
+        sky.appendChild(star);
+    }
+});
+</script>
+</body>
 </html>
