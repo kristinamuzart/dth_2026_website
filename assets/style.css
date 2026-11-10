@@ -269,3 +269,89 @@ main a {
 main a:hover {
     color: #F27E98;
 }
+
+/* =========================
+   DARK LOFI WEBSITE THEME
+   ========================= */
+
+/* Overall website background */
+
+html,
+body {
+    background-color: #10152E;
+    color: #F0EAF8;
+}
+
+/* Main reading area */
+
+main,
+#content,
+article {
+    background-color: #10152E;
+    color: #F0EAF8;
+}
+
+/* Article paragraphs and lists */
+
+main p,
+main li,
+#content p,
+#content li,
+article p,
+article li {
+    color: #E2DCEC;
+}
+
+/* Headings inside the articles */
+
+main h1,
+main h2,
+main h3,
+main h4,
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+article h1,
+article h2,
+article h3,
+article h4 {
+    color: #C9A7E8;
+}
+
+/* Links inside articles */
+
+main a,
+#content a,
+article a {
+    color: #F29AB2;
+}
+
+main a:hover,
+#content a:hover,
+article a:hover {
+    color: #FFD2DD;
+}
+
+/* Navigation bar */
+
+#navBar {
+    background-color: #10152E;
+}
+
+#navBar a,
+#navBar .navLink {
+    color: #E2DCEC;
+}
+
+#navBar a:hover,
+#navBar .navLink:hover {
+    color: #F29AB2;
+}
+
+/* Keep the title over the banner light */
+
+#bannerShadow h1 {
+    color: #F6EFF8;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
