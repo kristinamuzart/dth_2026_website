@@ -548,3 +548,64 @@ article a:hover {
     color: #FFD2DD;
     text-shadow: 0 0 8px rgba(242, 154, 178, 0.35);
 }
+
+/* =========================
+   COZY LOFI GLASS CARDS
+   ========================= */
+
+/* Translucent article cards */
+
+.carouselArt {
+    background: rgba(45, 38, 83, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(201, 167, 232, 0.25);
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Slightly brighter card when selected */
+
+.inFocusArt {
+    background: rgba(62, 48, 103, 0.65);
+    border-color: rgba(201, 167, 232, 0.5);
+}
+
+/* Side cards */
+
+.outOfFocusArt {
+    background: rgba(34, 31, 68, 0.4);
+}
+
+/* Article images */
+
+.carouselArt img {
+    border-radius: 12px;
+}
+
+/* Article headings */
+
+.carouselArt h3 {
+    color: #D8B8F0;
+}
+
+/* Article descriptions */
+
+.carouselArt p {
+    color: #E7DFF0;
+}
+
+/* Soft glow on hover */
+
+.carouselArt:hover {
+    background: rgba(69, 52, 108, 0.65);
+    border-color: #F29AB2;
+
+    box-shadow:
+        0 0 18px rgba(174, 93, 170, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
