@@ -37,3 +37,24 @@ audio.addEventListener("pause", () => {
 volume.addEventListener("input", () => {
     audio.volume = Number(volume.value);
 });
+
+// Minimize and expand the player
+
+const minimizeButton = document.getElementById("lofiMinimize");
+const player = document.getElementById("lofiPlayer");
+
+minimizeButton.addEventListener("click", () => {
+    const minimized = player.classList.toggle("minimized");
+
+    minimizeButton.textContent = minimized ? "+" : "−";
+
+    minimizeButton.setAttribute(
+        "aria-label",
+        minimized ? "Expand music player" : "Minimize music player"
+    );
+
+    minimizeButton.setAttribute(
+        "aria-expanded",
+        String(!minimized)
+    );
+});

@@ -111,6 +111,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- Cozy lofi music player -->
 <div id="lofiPlayer">
+<button id="lofiMinimize" type="button"
+        aria-label="Minimize music player"
+        aria-expanded="true">
+    −
+</button>
+
   <div class="vinyl-record" id="vinylRecord">
     <div class="vinyl-label">♡</div>
   </div>
@@ -139,5 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 <script src="./assets/lofi-player.js" defer></script>
+
+<script src="./assets/smooth-navigation.js" defer></script>
 </body>
 </html>
