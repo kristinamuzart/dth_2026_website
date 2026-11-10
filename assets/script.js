@@ -34,10 +34,7 @@ const featureArt = (i) => {
   const centerArticle = articles[selectedIndex];
   const rightArticle = articles[(selectedIndex + 1) % 3];
 
-  carousel.append(leftArticle, centerArticle, rightArticle);
-};
-
-  });
+    carousel.append(leftArticle, centerArticle, rightArticle);
 };
 
 const moveCarousel = (e, direction) => {
