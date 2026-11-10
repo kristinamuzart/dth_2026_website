@@ -1,4 +1,3 @@
-#
 # NLTK: An Open-Source Tool for English Majors
 
 ## Open-Source Software in English and Linguistics
