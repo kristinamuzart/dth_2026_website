@@ -503,3 +503,48 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
 }
+
+/* =========================
+   COZY LOFI HOVER EFFECTS
+   ========================= */
+
+/* Smooth transitions for navigation links */
+
+#navBar a {
+    transition: color 0.3s ease,
+                text-shadow 0.3s ease;
+}
+
+/* Pink glow when hovering over navigation links */
+
+#navBar a:hover {
+    color: #F29AB2;
+    text-shadow: 0 0 10px rgba(242, 154, 178, 0.7);
+}
+
+/* Soft glowing article cards */
+
+.carouselArt {
+    transition: box-shadow 0.3s ease,
+                border-color 0.3s ease;
+    border: 1px solid transparent;
+    border-radius: 16px;
+}
+
+/* Purple and pink glow when hovering */
+
+.carouselArt:hover {
+    border-color: #AE5DAA;
+    box-shadow:
+        0 0 15px rgba(174, 93, 170, 0.3),
+        0 0 30px rgba(242, 154, 178, 0.15);
+}
+
+/* Glow on article links */
+
+main a:hover,
+#content a:hover,
+article a:hover {
+    color: #FFD2DD;
+    text-shadow: 0 0 8px rgba(242, 154, 178, 0.35);
+}
