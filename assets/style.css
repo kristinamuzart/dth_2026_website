@@ -5,14 +5,16 @@
 
 /* here we set up project specific variables - this way we can keep the style consistent across all pages and elements. You can also create variable names for specific fonts and other elements */
 :root {
-  --white: #ffffff;
-  --black: #000000;
-  --blue: #5899e2;
-  --light-blue: #d6eaff;
-  --green: #9de38c;
-  --purple: #ceaeea;
-  --red: #f22c43;
-  --yellow: #fddd0d;
+  
+    --white: #F6EFF8;
+    --black: #10152E;
+    --blue: #7462B5;
+    --light-blue: #E6DDF5;
+    --green: #80B8B0;
+    --purple: #AE5DAA;
+    --red: #F27E98;
+    --yellow: #F5BC80;
+
   --projectFont: Lexend, Arial, sans-serif;
 }
 
@@ -67,7 +69,7 @@ section {
 /* hero banner */
 
 #pageHero {
-  background-image: url("./images/skagen.jpg");
+ background-image: url("./images/banner.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,7 +77,7 @@ section {
 }
 
 #bannerShadow {
-  background-color: rgba(160, 213, 240, 0.447);
+  background-color: rgba(16, 21, 46, 0.25);
   height: 100%;
 }
 
@@ -229,3 +231,11 @@ main img {
 }
 
 #page_two h2 { color: var(--red); }
+/* Lofi banner title styling */
+
+#bannerShadow h1 {
+    color: #F6EFF8;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    padding: 0 20px;
+}
