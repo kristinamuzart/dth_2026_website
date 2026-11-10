@@ -355,3 +355,37 @@ article a:hover {
     color: #F6EFF8;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
 }
+
+/* Remove the white fade from carousel articles */
+
+.carouselArt::after {
+    display: none;
+}
+
+/* Improve carousel spacing and readability */
+
+#carouselMain {
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.carouselArt {
+    min-width: 0;
+    padding: 15px;
+}
+
+.carouselArt h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.carouselArt p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.carouselArt img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
