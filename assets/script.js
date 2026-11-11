@@ -37,55 +37,25 @@ const featureArt = (i) => {
     carousel.append(leftArticle, centerArticle, rightArticle);
 };
 
-const moveCarousel = (e, direction) => {
-  console.log(typeof artInFocus);
-  console.log(artInFocus);
-  switch (parseInt(artInFocus)) {
-    case 1:
-      if (direction == "next") {
-        artInFocus = parseInt(artInFocus) + 1;
-        console.log(typeof artInFocus);
-        console.log(artInFocus);
-        artInFocus = artInFocus.toString();
-        featureArt(artInFocus);
-        btnLeft.classList.remove("btnDisabled");
-        btnLeft.removeAttribute("disabled");
-      }
-      break;
-    case 2:
-      if (direction == "prev") {
-        artInFocus = parseInt(artInFocus) - 1;
-        console.log(typeof artInFocus);
-        console.log(artInFocus);
-        artInFocus = artInFocus.toString();
-        e.srcElement.setAttribute("disabled", "");
-        e.srcElement.classList.add("btnDisabled");
-        featureArt(artInFocus);
-      } else if (direction == "next") {
-        artInFocus = parseInt(artInFocus) + 1;
-        console.log(typeof artInFocus);
-        console.log(artInFocus);
-        artInFocus = artInFocus.toString();
-        e.srcElement.setAttribute("disabled", "");
-        e.srcElement.classList.add("btnDisabled");
-        featureArt(artInFocus);
-      }
-      break;
-    case 3:
-      if (direction == "prev") {
-        artInFocus = parseInt(artInFocus) - 1;
-        console.log(typeof artInFocus);
-        console.log(artInFocus);
-        artInFocus = artInFocus.toString();
-        featureArt(artInFocus);
-        btnRight.classList.remove("btnDisabled");
-        btnRight.removeAttribute("disabled");
-      }
-      break;
-  }
-};
 
-// only pages that have a carousel get the buttons wired up
+const moveCarousel = (e, direction) => {
+  const currentIndex = articles.findIndex(
+    (art) => art.dataset.artid == artInFocus
+  );
+
+  if (currentIndex === -1) return;
+
+  let nextIndex;
+
+  if (direction === "next") {
+    nextIndex = (currentIndex + 1) % articles.length;
+  } else {
+    nextIndex = (currentIndex - 1 + articles.length) % articles.length;
+  }
+
+  artInFocus = articles[nextIndex].dataset.artid;
+  featureArt(artInFocus);
+};
 if (btnLeft && btnRight) {
   btnLeft.addEventListener("click", (e) => moveCarousel(e, "prev"));
   btnRight.addEventListener("click", (e) => moveCarousel(e, "next"));
